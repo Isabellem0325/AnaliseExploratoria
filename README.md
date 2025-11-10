@@ -4,6 +4,28 @@
 
 O commit é o registro de modificações feitas no código, que serve para salvar o progresso do projeto com uma mensagem indicando o que foi modificado.
 
+## Resultados gráficos da Análise Exploratória
+
+### Histograma da idade
+O histograma mostra a distribuição das idades das pessoas analisadas.
+Observa-se que a mior parte das idades se concentra nas faixas intemediárias, com menor frequências nas idades muito baixas ou muito altas.
+Essa distribuição sugere que o grupo avaliado possui uma predominância de adultos, com poucos casos nas extremidades de idade.
+
+### Boxplot do tempo preso
+O boxplot do tempo preso apresenta a dispersão dos valores em meses.  
+É possível visualizar a mediana e a presença de possíveis valores mais afastados (outliers).  
+A amplitude do gráfico indica que há uma variação considerável no tempo de prisão entre os indivíduos analisados.
+
+### Boxplot do score de periculosidade por escolaridade
+Esse gráfico permite comparar o score de periculosidade entre diferentes níveis de escolaridade.  
+Nota-se que há diferenças na mediana e na variabilidade dos valores conforme o nível educacional, indicando que o score pode variar de acordo com o grau de instrução.  
+Os boxplots também ajudam a identificar grupos com maior dispersão nos valores de periculosidade.
+
+### Gráfico de barras de reincidência
+O gráfico de barras mostra a frequência de pessoas reincidentes e não reincidentes.  
+Percebe-se que há uma diferença clara entre as categorias, evidenciando o percentual de indivíduos que voltaram a cometer infrações em relação aos que não reincidiram.  
+Esse tipo de visualização é útil para entender o perfil de reincidência no conjunto de dados.
+
 ## Medidas de tendência central e de dispersão e suas definições
 
 ### Média
