@@ -1,6 +1,6 @@
-#########################################################
-#----- Instalando os pacotes necessários
-#########################################################
+#---------------------------------------
+# Instalando os pacotes necessários
+#---------------------------------------
 
 install.packages("readr")
 install.packages("readxl")
@@ -9,18 +9,18 @@ install.packages("readxl")
 library(readr)
 library(readxl)
 
-#########################################################
-#----- Importando a base de dados
-#########################################################
+#---------------------------------------
+# Importando a base de dados
+#---------------------------------------
 
 base = read_excel("Base_trabalho.xlsx")
 
 #Visualizando o objeto
 View(base)
 
-#########################################################
-#----- Transformando as variáveis qualitativas em fatores
-#########################################################
+#---------------------------------------
+# Transformando as variáveis qualitativas em fatores
+#---------------------------------------
 
 #Verificando quais são qualitativas
 str(base)
@@ -31,16 +31,16 @@ base$escolaridade = as.factor(base$escolaridade)
 #Visualizando a estrutura da base para confirmar mudança
 str(base)
 
-#########################################################
-#----- Fazendo uma análise sobre dados faltantes
-#########################################################
+#---------------------------------------
+# Fazendo uma análise sobre dados faltantes
+#---------------------------------------
 
 #Verificando a quantidade de dados ausentes por variável
 colSums(is.na(base))
 
-#########################################################
-#----- Fazendo um histograma da variável idade
-#########################################################
+#---------------------------------------
+# Fazendo um histograma da variável idade
+#---------------------------------------
 
 hist(base$idade,
      main = "Histograma da Idade",
@@ -48,18 +48,18 @@ hist(base$idade,
      ylab = "Frequência",
      col = "#405E91")
 
-#########################################################
-#----- Fazendo um boxplot da variável tempo_preso
-#########################################################
+#---------------------------------------
+# Fazendo um boxplot da variável tempo_preso
+#---------------------------------------
 
 boxplot(base$tempo_preso,
         main = "Bloxplot do tempo preso",
         ylab = "Tempo preso (em meses)",
         col = "#406691")
 
-#########################################################
-#----- Fazendo um boxplot da variável score_periculosidade por escolaridade
-#########################################################
+#---------------------------------------
+# Fazendo um boxplot da variável score_periculosidade por escolaridade
+#---------------------------------------
 
 boxplot(score_periculosidade ~ escolaridade,
         data = base,
@@ -68,9 +68,9 @@ boxplot(score_periculosidade ~ escolaridade,
         ylab = "Score de periculosidade",
         col = "#406d91")
 
-#########################################################
-#----- Fazendo um gráfico de barras para a variável reincidente
-#########################################################
+#---------------------------------------
+# Fazendo um gráfico de barras para a variável reincidente
+#---------------------------------------
 
 barplot(table(base$reincidente),
         main = "Gráfico de barras - Reincidência",
@@ -78,9 +78,9 @@ barplot(table(base$reincidente),
         ylab = "Frequência",
         col = "#407391")
 
-#########################################################
-#----- Salvando as figuras em pdf ou png
-#########################################################
+#---------------------------------------
+# Salvando as figuras em pdf ou png
+#---------------------------------------
 
 #Opção 1 - Salvando em pdf (aqui ele salvará todos os conteúdos em um único arquivo)
 pdf("graficos.pdf")
